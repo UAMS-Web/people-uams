@@ -1,0 +1,14 @@
+/*!
+Theme Name: People of UAMS
+Theme URI: uams.edu
+Description: People of UAMS Theme
+Author: UAMS Web Team
+Author URI: http://uams.edu
+Template: uams-2016
+Version: 1.0
+ */
+.rwmb-row {
+    padding-bottom: 1em;
+    border-bottom: 1px inset;
+    margin-bottom: 1em;
+    }
