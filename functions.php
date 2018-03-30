@@ -305,6 +305,41 @@ function fwp_load_more() {
 <?php
 }
 add_action( 'wp_head', 'fwp_load_more', 99 );
+
+// FacetWP Sort
+add_filter( 'facetwp_sort_options', function( $options, $params ) {
+	$params = array(
+	    'template_name' => 'people', 
+	);
+    $options['name_asc'] = array(
+        'label' => __( 'Name (A-Z)', 'fwp' ),
+        'query_args' => array(
+            'orderby' => 'meta_value',
+			'meta_key' => 'person_full_name_meta',
+			'order' => 'ASC',
+        )
+    );
+    $options['name_desc'] = array(
+        'label' => __( 'Name (Z-A)', 'fwp' ),
+        'query_args' => array(
+            'orderby' => 'meta_value',
+			'meta_key' => 'person_full_name_meta',
+            'order' => 'DESC',
+        )
+    );
+    //);
+     unset( $options['title_asc'] );
+     unset( $options['title_desc'] );
+     unset( $options['date_desc'] );
+     unset( $options['date_asc'] );
+    return $options;
+}, 10, 2 );
+
+//FacetWP Count
+add_filter( 'facetwp_result_count', function( $output, $params ) {
+    $output = $params['total'] . ( $params['total'] > 1 ? ' People' : ' Person' );
+    return $output;
+}, 10, 2 );
 /* End FacetWP functions */
 
 // Format Phone Numbers

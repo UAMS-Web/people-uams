@@ -60,6 +60,15 @@
 		        	</div>
 					<div class="col-md-8 people">
 						<?php echo facetwp_display( 'facet', 'alpha' ); ?>
+						<div class="row">
+				        	<div class="col-md-8 text-center">
+								<?php echo facetwp_display( 'counts' ); ?>
+							</div>
+				        	<div class="col-md-4 text-right">
+								<?php echo facetwp_display( 'sort' ); ?>
+							</div>
+						</div>
+						<hr>
 						<?php echo facetwp_display( 'template', 'people' ); ?>
 						<?php //echo facetwp_display( 'pager' ); ?>
 						<?php //echo do_shortcode('[facetwp load_more="true" label="Load more"]'); ?>
