@@ -36,7 +36,7 @@
 	    	<ul>
 	    		<li><a href="http://www.uams.edu" title="University of Arkansas for Medical Scineces">Home</a></li>
 	    		<li><a href="/" title="<?php echo str_replace('   ', ' ', get_bloginfo('title')); ?>"><?php echo str_replace('   ', ' ', get_bloginfo('title')); ?></a></li>
-	    		<li><a href="/people/" title="People">People</a></li>
+	    		<li><a href="<?php echo get_bloginfo('url'); ?>/people/" title="People">People</a></li>
 	    		<li class="current"><span><?php echo $tax->name; ?></span>
 	    	</ul>
 	    </nav>

@@ -25,7 +25,7 @@
 		  ?>
 
 	      <div id='main_content' class="uams-body-copy" tabindex="-1">
-	      	<div style="margin-bottom: 10px; max-width: 450px;"><?php echo do_shortcode( '[wpdreams_ajaxsearchpro id=2]' ); ?></div>
+	      	<div class="margin-bottom-one search-box-lg"><?php echo do_shortcode( '[wpdreams_ajaxsearchpro id=2]' ); // install dependent ?></div>
 	        <div class="row">
 		        <div class="col-md-8">
 	                <h1 class="title-heading-left" data-fontsize="34" data-lineheight="48"><?php echo rwmb_meta('person_first_name'); ?> <?php echo (rwmb_meta('person_middle_name') ? rwmb_meta('person_middle_name') : ''); ?> <?php echo rwmb_meta('person_last_name'); ?><?php echo (rwmb_meta('person_degree') ? ', ' . rwmb_meta('person_degree') : ''); ?></h1>
@@ -36,7 +36,7 @@
 	        </div>
 			<div class="row">
 				<div class="col-md-3">
-	                <div style="padding-bottom: 1em;">
+	                <div class="margin-bottom-one">
 	                    <?php the_post_thumbnail( 'medium' ); ?>
 	                    <?php
 		                    $colleges = rwmb_meta('person_academic_college');

@@ -4,10 +4,10 @@
     <?php $full_name = rwmb_meta('person_first_name') .' ' .(rwmb_meta('person_middle_name') ? rwmb_meta('person_middle_name') . ' ' : '') . rwmb_meta('person_last_name') . (rwmb_meta('person_degree') ? ', ' . rwmb_meta('person_degree') : '');
 	      $profileurl = get_the_permalink();
     ?>
-    <div class="<?php echo $class; ?>" style="border:1px solid #ececec;padding:10px; margin-bottom: 10px;">
+    <div class="<?php echo $class; ?> archive-box">
 	    <div class="row">
 	        <div class="col-md-12">
-		        <a href="<?php echo $profileurl; ?>"><h2 style="margin-top: 0;"><?php echo $full_name; ?></h2></a>
+		        <a href="<?php echo $profileurl; ?>"><h2 class="margin-top-none"><?php echo $full_name; ?></h2></a>
 				<?php // load all 'colleges' terms for the post
 				$colleges = rwmb_meta('person_academic_college');
 
@@ -24,14 +24,14 @@
 	        </div>
     	</div>
         <div class="row">
-            <div class="col-md-3" style="margin-top:0px;margin-bottom:20px;">
-	            <div style="padding-bottom: 1em;">
-                	<span style="-moz-box-shadow: 0 0 3px rgba(0,0,0,.3);-webkit-box-shadow: 0 0 3px rgba(0,0,0,.3);box-shadow: 0 0 3px rgba(0,0,0,.3);"><a href="<?php echo $profileurl; ?>" target="_self"><?php the_post_thumbnail( 'medium' ); ?></a></span>
+            <div class="col-md-3" class="margin-top-none margin-bottom-two">
+	            <div class="margin-bottom-two">
+                	<span><a href="<?php echo $profileurl; ?>" target="_self"><?php the_post_thumbnail( 'medium' ); ?></a></span>
 	            </div>
                 <a class="uams-btn btn-blue btn-sm" target="_self" title="View Profile" href="<?php echo $profileurl; ?>">View Profile</a>
             </div>
-            <div class="col-md-9" style="margin-top:0px;margin-bottom:0px;">
-                    <div class="row" style="margin-top:0px;margin-bottom:0px;">
+            <div class="col-md-9" class="margin-top-none margin-bottom-none">
+                    <div class="row" class="margin-top-none margin-bottom-none">
                         <div class="col-md-6">
                             <p><?php echo ( rwmb_meta('person_academic_short_bio') ? rwmb_meta( 'person_academic_short_bio') : wp_trim_words( rwmb_meta( 'person_academic_bio' ), 30, ' &hellip;' ) ); ?></p>
                             <a class="more" target="_self" title="View Profile" href="<?php echo $profileurl; ?>">View Profile</a>
